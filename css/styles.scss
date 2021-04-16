@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+$rally-green: #1eb980;
+$rally-dark-green: #045d56;
+$rally-orange: #ff6859;
+$rally-yellow: #ffcf44;
+$rally-purple: #b15dff;
+$rally-blue: #72deff;
+$bg-primary: #333333;
+$bg-secondary: #424242;
+
+body {
+  background: $bg-primary;
+  color: white;
+  background-image: url(/img/design.svg);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+nav {
+  background-color: $bg-primary;
+  box-shadow: 0px -3px 3px $rally-yellow inset;
+  .nav-link {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+.navbar-brand, .brand {
+  font-family: "Eczar", serif;
+  h1 {
+    margin-bottom: 0px;
+    font-size: xx-large;
+  }
+}
+
+.brand:hover{
+  color:$rally-yellow;
+}
+
+footer{
+  min-height: 200px;
+  h2{
+    color: white;
+  }
+  .container{
+    padding: 10px;
+  }
+  background-color: $bg-primary;
+  box-shadow: 0px 3px 3px $rally-orange inset;
+  a{
+    color: grey;
+  }
+  a:hover{
+    color: rgba(128, 128, 128, 0.7);
+    text-decoration: none;
+  }
+}
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+  margin: 0px;
+  padding: $pad-up-dn $pad-left-right;
+}
+.lg-icon {
+  font-size: 6rem;
+}
+.fa-github:hover {
+  color: $rally-orange;
+}
+
+.fa-linkedin-square:hover {
+  color: $rally-blue;
+}
+.row-content {
+  @include zero-margin(40px, 0);
+  min-height: 300px;
+}
+
+@mixin media($sidecolor, $left, $right) {
+  border-right: $right solid $sidecolor;
+  border-left: $left solid $sidecolor;
+  margin: 10px 0px;
+}
+
+.media-orange-left {
+  @include media($rally-orange, 2px, 0px);
+}
+
+.media-yellow-right {
+  @include media($rally-yellow, 0px, 2px);
+}
+
+.media-blue-left {
+  @include media($rally-blue, 2px, 0px);
+}
+@mixin block($offset-x, $offset-y, $shadow-color) {
+  box-shadow: $offset-x $offset-y 4px $shadow-color inset;
+  border-radius: 15px;
+}
+
+.block-1 {
+  @include block(5px, 5px, $rally-blue);
+}
+.block-2 {
+  @include block(0px, 3px, $rally-purple);
+}
+.block-3 {
+  @include block(0px, 3px, $rally-green);
+}
+.row {
+  .col:hover {
+    transform: scale(1.05);
+    transition: 1.5s;
+  }
+  .col-sm-6:hover {
+    transform: scale(1.05);
+    transition: 1s;
+  }
+  address{
+    line-height: 2;
+  }
+}
+.footer-content{
+  color: grey;
+}

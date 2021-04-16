@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+body {
+  background: #333333;
+  color: white;
+  background-image: url(/img/design.svg);
+  background-size: cover;
+  background-blend-mode: multiply; }
+
+nav {
+  background-color: #333333;
+  box-shadow: 0px -3px 3px #ffcf44 inset; }
+  nav .nav-link {
+    font-family: "Open Sans", sans-serif; }
+
+.navbar-brand, .brand {
+  font-family: "Eczar", serif; }
+  .navbar-brand h1, .brand h1 {
+    margin-bottom: 0px;
+    font-size: xx-large; }
+
+.brand:hover {
+  color: #ffcf44; }
+
+footer {
+  min-height: 200px;
+  background-color: #333333;
+  box-shadow: 0px 3px 3px #ff6859 inset; }
+  footer h2 {
+    color: white; }
+  footer .container {
+    padding: 10px; }
+  footer a {
+    color: grey; }
+  footer a:hover {
+    color: rgba(128, 128, 128, 0.7);
+    text-decoration: none; }
+
+.lg-icon {
+  font-size: 6rem; }
+
+.fa-github:hover {
+  color: #ff6859; }
+
+.fa-linkedin-square:hover {
+  color: #72deff; }
+
+.row-content {
+  margin: 0px;
+  padding: 40px 0;
+  min-height: 300px; }
+
+.media-orange-left {
+  border-right: 0px solid #ff6859;
+  border-left: 2px solid #ff6859;
+  margin: 10px 0px; }
+
+.media-yellow-right {
+  border-right: 2px solid #ffcf44;
+  border-left: 0px solid #ffcf44;
+  margin: 10px 0px; }
+
+.media-blue-left {
+  border-right: 0px solid #72deff;
+  border-left: 2px solid #72deff;
+  margin: 10px 0px; }
+
+.block-1 {
+  box-shadow: 5px 5px 4px #72deff inset;
+  border-radius: 15px; }
+
+.block-2 {
+  box-shadow: 0px 3px 4px #b15dff inset;
+  border-radius: 15px; }
+
+.block-3 {
+  box-shadow: 0px 3px 4px #1eb980 inset;
+  border-radius: 15px; }
+
+.row .col:hover {
+  transform: scale(1.05);
+  transition: 1.5s; }
+
+.row .col-sm-6:hover {
+  transform: scale(1.05);
+  transition: 1s; }
+
+.row address {
+  line-height: 2; }
+
+.footer-content {
+  color: grey; }
