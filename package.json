@@ -4,11 +4,17 @@
   "description": "\"# geekymeeky.github-io\"",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run watch:all",
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* --out-dir='dist/img'",
+    "usemin": "usemin portfolio.html -d dist --htmlmin -o dist/portfolio.html && usemin education.html -d dist --htmlmin -o dist/education.html && usemin index.html -d dist --htmlmin -o dist/index.html && usemin experience.html -d dist --htmlmin -o dist/experience.html",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -28,9 +34,14 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "clean-css": "^5.1.2",
+    "htmlmin": "0.0.7",
     "lite-server": "^2.6.1",
     "node-sass": "^5.0.0",
     "onchange": "^7.1.0",
-    "parallelshell": "^3.0.1"
+    "parallelshell": "^3.0.1",
+    "rimraf": "^3.0.2",
+    "uglify-js": "^3.13.4",
+    "usemin-cli": "^0.6.0"
   }
 }

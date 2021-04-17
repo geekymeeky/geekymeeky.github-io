@@ -5,7 +5,8 @@ body {
   color: white;
   background-image: url(/img/design.svg);
   background-size: cover;
-  background-blend-mode: multiply; }
+  background-blend-mode: multiply;
+  background-position: center; }
 
 nav {
   background-color: #333333;
